@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Bye from './bye' 
+import Bye from './bye';
+import Welcome from './functionalComponent';
 
 export default class HelloMessage extends React.Component {
   constructor(){
@@ -11,6 +12,7 @@ export default class HelloMessage extends React.Component {
   render() {
    
     return <div>
+      <Welcome/>
       {this.name}
       {this.props.name}
       {this.props.lastname}
