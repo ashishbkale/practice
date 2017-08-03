@@ -1,0 +1,17 @@
+{
+  "name": "learn-graphql",
+  "version": "0.0.1",
+  "description": "learing the graphql",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon server/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "express": "^4.15.3",
+    "express-graphql": "^0.6.7",
+    "graphql": "^0.10.5"
+  }
+}
