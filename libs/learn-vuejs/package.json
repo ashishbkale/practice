@@ -1,0 +1,21 @@
+{
+  "name": "learn-vuejs",
+  "version": "1.0.0",
+  "description": "learing the vuejs",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "vuejs",
+    "vue",
+    "sample",
+    "demo",
+    "app"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.4.4"
+  }
+}
