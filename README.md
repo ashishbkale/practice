@@ -1,7 +1,4 @@
-<<<<<<< Updated upstream
-# practice
-small practice  application 
-=======
+
 # Personal Practice Repo #
 
 ### Problem
@@ -11,4 +8,4 @@ Frameworks | Lib | Testing | Tools
 --- | --- | --- | ---
 *Angular 1* | `React` | **JEST**  |NPM
 *Angular 2* | `Vue` |  *Mocha* | Yarn
->>>>>>> Stashed changes
+
