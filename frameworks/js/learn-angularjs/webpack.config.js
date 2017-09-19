@@ -15,7 +15,8 @@ const  config = {
             use: [ 'style-loader', 'css-loader' ]
           }
         ]
-    }
+    },
+    devtool: 'eval'
 }
 
 module.exports = config;
