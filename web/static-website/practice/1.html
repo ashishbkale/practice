@@ -1,0 +1,19 @@
+
+<body onresize="changeScreen('srinivas')" onload="pageLoad()">
+        <button onclick="myfunc()">click me</button>
+        <button ondblclick="dblclick()">dobule click</button>
+
+</body>
+
+
+
+<script>
+    function myfunc(){
+        alert(this)
+    }
+
+    let dblclick =()=> alert(this)
+    let changeScreen = (name) => console.log(name);
+
+    let pageLoad = (name) => alert("jhe")
+</script>
