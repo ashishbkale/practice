@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React 16.3</title>
+    <script src="https://unpkg.com/react@16.3.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.3.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function First(props){
+            return (
+                <div>{props.age}</div>
+            )
+        }
+        class Hello extends React.Component {
+            constructor(props){
+                super(props)
+                this.handleClick=this.handleClick.bind(this)
+                this.state={
+                    name:this.props.name
+                }
+            }
+            componentDidMount(){
+                console.log("did mount")
+            }
+            handleClick(){
+                console.log("handleClick!!!!")
+                this.setState({
+                    name:"vasu"
+                })
+            }
+            componentDidUpdate(){
+                console.log("asdf")
+                console.log(this)
+            }
+            componentDidCatch(){
+                cosnole.log("error")
+            }
+            render(){
+                return (
+                    <React.Fragment>
+                        <div>Hello {this.props.name}</div>
+                        <div>Hello</div>
+                        <div>Hello</div>
+                        <button onClick={this.handleClick}>click</button>
+                        {this.state.name} 
+                        <First age="30"/>
+                        
+                    </React.Fragment>
+                )
+            }
+        }
+
+      ReactDOM.render(
+       
+       <Hello name="Srinvias"/>,
+        document.getElementById('root')
+      );
+    </script>
+  
+  </body>
+</html>
