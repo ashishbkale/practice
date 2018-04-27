@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React 16.3</title>
+    <script src="https://unpkg.com/react@16.3.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.3.2/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	<style>
+		h1 {
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+		}
+		.mycls {
+			color: blue;
+		}
+	</style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+	const user = {
+	firstName: 'Harper',
+	lastName: 'Perez',
+	avatarUrl:"https://avatars2.githubusercontent.com/u/10164017?s=460&v=4"
+};
+
+function formatName(user) {
+  return user.firstName + ' ' + user.lastName;
+}
+
+	var name="Srinivas"
+	 const element =(
+		 <div>
+			<h1 className="mycls">hello{name}{formatName(user)}{3+3} {"srinivas"+"vasu"}</h1>
+			<img src={user.avatarUrl}></img>;
+		 </div>
+	 )
+      ReactDOM.render(
+        element,
+        document.getElementById('root')
+      );
+    </script>
+
+  </body>
+</html>
