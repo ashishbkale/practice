@@ -9,10 +9,25 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="text/babel">
+	<script type="text/babel">
+	  function Button(){
+		  return(
+			  <div>
+			  <button>click</button>
+			  </div>
+		  )
+	  }
 
       ReactDOM.render(
-        <h1>Hello, world!</h1>,
+		  <div>
+        <Button/>
+		<Button/>
+		<Button/>
+		<Button/>
+		<Button/>
+		<Button/>
+
+		</div>,
         document.getElementById('root')
       );
     </script>
