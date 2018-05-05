@@ -1,3 +1,3 @@
-export default function bar(){
-    console.log("this")
+export function bar() {
+	console.log('this');
 }
