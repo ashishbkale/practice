@@ -6,7 +6,8 @@
 	"scripts": {
 		"start": "webpack --watch",
 		"build": "webpack-dev-server --open --hot",
-		"test": "jest"
+		"test": "jest",
+		"lint": "eslint --fix src/**/*.js"
 	},
 	"keywords": [],
 	"author": "",
@@ -18,6 +19,11 @@
 		"babel-preset-react": "^6.24.1",
 		"clean-webpack-plugin": "^0.1.16",
 		"css-loader": "^0.28.4",
+		"eslint": "^4.19.1",
+		"eslint-config-airbnb": "^16.1.0",
+		"eslint-plugin-import": "^2.11.0",
+		"eslint-plugin-jsx-a11y": "^6.0.3",
+		"eslint-plugin-react": "^7.7.0",
 		"extract-text-webpack-plugin": "^3.0.0",
 		"file-loader": "^0.11.2",
 		"jest": "^22.4.3",
