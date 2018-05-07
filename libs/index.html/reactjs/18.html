@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>React 16.3</title>
+	<script src="https://unpkg.com/react@16.3.2/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@16.3.2/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+
+<body>
+	<div id="root"></div>
+	<script type="text/babel">
+		class Hello extends React.Component {
+			constructor(props){
+				super(props)
+			}
+			hangeChange=()=>{
+				console.log("hii")
+				this.setState(()=>{
+					name:"vasu"
+				})
+			}
+			render(){
+				return (
+					<div>
+						{this.props.name}
+						<button onClick={this.hangeChange}>click</button>
+
+					</div>
+				);
+			}
+		}
+
+      ReactDOM.render(
+        <Hello name="srinivas"/>,
+        document.getElementById('root')
+      );
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>React 16.3</title>
+	<script src="https://unpkg.com/react@16.3.2/umd/react.development.js"></script>
+	<script src="https://unpkg.com/react-dom@16.3.2/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+
+<body>
+	<div id="root">
+
+
+
+		jhjhhjhjh
+	</div>
+	<script type="text/babel">
+	class Timer extends React.Component {
+		constructor(props) {
+			super(props);
+			this.state = { seconds: 0 };
+		}
+
+		tick() {
+			this.setState(prevState => ({
+			seconds: prevState.seconds + 1
+			}));
+		}
+
+		componentDidMount() {
+			this.interval = setInterval(() => this.tick(), 1000);
+		}
+
+		componentWillUnmount() {
+			clearInterval(this.interval);
+		}
+
+		render() {
+			return (
+			<div>
+				Seconds: {this.state.seconds}
+			</div>
+			);
+		}
+}
+
+
+
+      ReactDOM.render(
+        <Timer/>,
+        document.getElementById('root')
+      );
+    </script>
+
+</body>
+
+</html>

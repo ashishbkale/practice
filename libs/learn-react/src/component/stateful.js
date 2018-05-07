@@ -1,16 +1,14 @@
-import React from 'react';
+import React from "react";
 
 export default class Timer extends React.Component {
-  constructor() {
-    super(props);
-    this.state = {
-      secondsElapsed: 0,
-    };
-  }
+	constructor() {
+		super(props);
+		this.state = {
+			secondsElapsed: 0
+		};
+	}
 
-  render() {
-    return (
-      <div>Seconds </div>
-    );
-  }
+	render() {
+		return <div>Seconds </div>;
+	}
 }
