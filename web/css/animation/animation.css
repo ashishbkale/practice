@@ -1,0 +1,16 @@
+.box {
+	width: 50%;
+	height: 50%;
+	background: red;
+	position: relative;
+	-webkit-animation: movieit 2s linear 0s infinite alternate;
+	animation: movieit 2s linear 0s infinite alternate;
+}
+@keyframes movieit {
+	form {
+		left: 0;
+	}
+	to {
+		left: 50%;
+	}
+}

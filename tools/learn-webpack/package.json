@@ -5,15 +5,22 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "webpack --watch",
-		"prod": "webpack --mode production"
+		"prod": "webpack --mode production",
+		"start:dev": "webpack-dev-server --open"
 	},
 	"author": "kasiriveni",
 	"sideEffects": true,
 	"license": "ISC",
 	"devDependencies": {
+		"css-loader": "^0.28.11",
+		"style-loader": "^0.21.0",
 		"ts-loader": "^4.2.0",
 		"typescript": "^2.8.3",
 		"webpack": "^4.7.0",
-		"webpack-cli": "^2.1.2"
+		"webpack-cli": "^2.1.2",
+		"webpack-dev-server": "^3.1.4"
+	},
+	"dependencies": {
+		"rxjs": "^6.1.0"
 	}
 }

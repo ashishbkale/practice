@@ -1,10 +1,10 @@
-const webpack = require('webpack');
-const path = require('path');
+const webpack = require("webpack");
+const path = require("path");
 module.exports = {
-	entry: './src/index.js',
+	entry: "./src/index.js",
 	output: {
-		filename: 'bundle.js',
-		path: path.resolve(__dirname, 'dist')
+		filename: "bundle.js",
+		path: path.resolve(__dirname, "dist")
 	},
 	module: {
 		rules: [
@@ -12,21 +12,25 @@ module.exports = {
 				test: /\.js$/,
 				exclude: /(node_modules|bower_components)/,
 				use: {
-					loader: 'babel-loader',
+					loader: "babel-loader",
 					options: {
-						presets: ['env']
+						presets: ["env"]
 					}
 				}
 			},
 			{
 				test: /\.tsx?$/,
-				use: 'ts-loader',
+				use: "ts-loader",
 				exclude: /node_modules/
+			},
+			{
+				test: /\.css$/,
+				use: ["style-loader", "css-loader"]
 			}
 		]
 	},
 	resolve: {
-		extensions: ['.tsx', '.ts', '.js']
+		extensions: [".tsx", ".ts", ".js"]
 	},
-	mode: 'development'
+	mode: "development"
 };
