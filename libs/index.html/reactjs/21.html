@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React 16.3</title>
+    <script src="https://unpkg.com/react@16.3.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.3.2/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+	<style>
+	  .mycls{
+		  color:blue;
+	  }
+	</style>
+  </head>
+  <body>
+	<div id="root"></div>
+
+	<div>
+		jk
+	</div>
+	<script type="text/babel">
+		 let url="https://vignette.wikia.nocookie.net/blogclan-2/images/4/45/Random-turtle.gif/revision/latest/scale-to-width-down/640?cb=20160706220110"
+
+		function sayHello(name){
+			return name;
+		}
+		const element=(
+			<div className="mycls">
+				<div>
+					hello {alert("hii")} {sayHello("custom function")}
+					<img src={url} />
+					<p>hekko</p>
+					<button>click</button>
+				</div>
+
+			</div>
+		)
+
+      ReactDOM.render(
+        element,
+        document.getElementById('root')
+      );
+    </script>
+
+  </body>
+</html>
