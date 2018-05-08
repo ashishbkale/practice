@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React 16.3</title>
+    <script src="https://unpkg.com/react@16.3.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.3.2/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	<style>
+		* {
+			box-sizing: border-box;
+			font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+			font-size: 16px;
+		}
+	</style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+
+	  class Cats  extends React.Component {
+		constructor(){
+			super()
+			this.state={
+				code:100
+			}
+			this.HangeChange=this.HangeChange.bind(this)
+		}
+		HangeChange(e){
+			console.log("click")
+			this.setState({ code: e.target.value });
+		}
+		  componentDidMount(){
+
+			  const code=this.state.code;
+			  fetch(`https://http.cat/${code}`)
+			  .then(res => res.json())
+		  }
+		  render(){
+			  return(
+				  <div className="conatainer">
+					 cats demo
+					 /*please select Satatus Code*/
+
+					 <input type="text"  id="code" value={this.state.code}  onChange={this.HangeChange}/>
+
+					 <p>{this.state.code}</p>
+				   </div>
+			  )
+		  }
+	  }
+      ReactDOM.render(
+        <Cats/>,
+        document.getElementById('root')
+      );
+    </script>
+
+  </body>
+</html>
