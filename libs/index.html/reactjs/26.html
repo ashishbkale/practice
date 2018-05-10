@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React 16.3</title>
+    <script src="https://unpkg.com/react@16.3.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.3.2/umd/react-dom.development.js"></script>
+	<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+	<style>
+		.conatienr {
+			border: 1px solid red;
+			padding: 20px;
+			margin: 20px;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+	</style>
+  </head>
+  <body>
+    <div id="root"></div>
+	<script type="text/babel">
+	  class Hello extends React.Component {
+		  srinivas(){
+			  console.log("srinivas")
+		  }
+		UNSAFE_componentWillMount(){
+			console.log("componentWillMount")
+		}
+
+		UNSAFE_componentDidMount(){
+			console.log("componentDidMount	")
+		}
+		  render(){
+			  return (
+				  <div className="conatienr">
+						Hello world
+				  </div>
+			  )
+		  }
+	  }
+
+      ReactDOM.render(
+        <Hello/>,
+        document.getElementById('root')
+      );
+    </script>
+
+  </body>
+</html>

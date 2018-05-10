@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React 16.3</title>
+    <script src="https://unpkg.com/react@16.3.2/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.3.2/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <style>
+	  .cls{
+		  font-size: 2em;
+		  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	  }
+  </style>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+		console.info("info done")
+		console.warn("bad boy");
+
+		class A {
+
+		}
+
+      ReactDOM.render(
+        <div className="cls">Hello, world!</div>,
+        document.getElementById("root")
+      );
+    </script>
+
+  </body>
+</html>
